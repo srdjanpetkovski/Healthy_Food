@@ -47,9 +47,11 @@ img {
   }
 }
 
-/* button {
-    @include btn($orange);
-} */
+img {
+  width: 100%;
+  display: block;
+}
+
 /***************
 MIXINS
 ***************/
@@ -241,5 +243,320 @@ ABOUT
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 30px;
+}
+
+/***************
+OTHER HEADER
+***************/
+.otherHeader {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.99)), to(rgba(255, 255, 255, 0.2))), url(img/header2.jpg);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.99), rgba(255, 255, 255, 0.2)), url(img/header2.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.otherHeader h1 {
+  color: #f8a055;
+  font-size: 3rem;
+  text-shadow: 0 0 2px #221f1a;
+}
+
+.otherHeader button {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  color: #221f1a;
+  background-color: #f8a055;
+  letter-spacing: 3px;
+  border: none;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  font-weight: 600;
+  padding: 15px 30px;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.otherHeader button:hover {
+  background-color: #988d51;
+}
+
+/***************
+PLAN
+***************/
+.plan {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0.15))), url(img/bg.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url(img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+.plan div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 70px 0;
+}
+
+.plan div article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+}
+
+.plan div article p {
+  margin-top: 50px;
+}
+
+.plan div article h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+/***************
+ORGANIC
+***************/
+.organsko {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(255, 255, 255, 0.15))), url(img/bg2.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url(img/bg2.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+.organsko div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 70px 0;
+}
+
+.organsko div article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+}
+
+.organsko div article p {
+  margin-top: 50px;
+}
+
+.organsko div article h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+/***************
+PROIZVODNJA
+***************/
+.poruci {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #fff;
+}
+
+.poruci article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.33%;
+          flex: 0 0 33.33%;
+}
+
+.poruci article h2 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.poruci article p {
+  padding: 0 15px;
+}
+
+.poruci article:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(248, 160, 85, 0.9)));
+  background: linear-gradient(rgba(248, 160, 85, 0.9));
+  padding: 115px 0;
+}
+
+/***************
+FOOTER
+***************/
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer article:nth-child(1) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(90, 87, 78, 0.9)));
+  background: linear-gradient(rgba(90, 87, 78, 0.9));
+  padding: 0 0 0 60px;
+  height: 300px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer article:nth-child(1) h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+footer article:nth-child(1) p {
+  font-weight: 600;
+}
+
+footer article:nth-child(2) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(248, 160, 85, 0.9)));
+  background: linear-gradient(rgba(248, 160, 85, 0.9));
+  padding: 0 0 0 60px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer article:nth-child(2) h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+footer article:nth-child(2) li {
+  font-weight: 600;
+}
+
+footer article:nth-child(2) li .fas {
+  text-shadow: 0 0 2px #221f1a;
+}
+
+footer article:last-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  text-align: center;
+  padding: 15px 0;
+}
+
+footer article:last-child a {
+  color: #f8a055;
+  font-weight: 600;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+footer article:last-child a:hover {
+  text-shadow: 0 0 1px #221f1a;
 }
 /*# sourceMappingURL=style.css.map */

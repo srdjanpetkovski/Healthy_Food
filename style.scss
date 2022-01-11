@@ -48,9 +48,10 @@ img {
         width: 90%;
     }
 }
-/* button {
-    @include btn($orange);
-} */
+img {
+    width: 100%;
+    display: block;
+}
 
 /***************
 MIXINS
@@ -175,6 +176,150 @@ ABOUT
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 30px;
+        }
+    }
+}
+
+/***************
+OTHER HEADER
+***************/
+.otherHeader {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, .99), rgba(255, 255, 255, .2)), url(img/header2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    @include flex(flex-start, center);
+    h1 {
+        color: $orange;
+        font-size: 3rem;
+        text-shadow: 0 0 2px $black;
+    }
+    button {
+        @include btn($orange);
+    }
+}
+
+/***************
+PLAN
+***************/
+.plan {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url(img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    color: $white;
+    div {
+        @include flex(space-between, center);
+        padding: $padding;
+        article {
+            flex: 0 0 45%;
+            p {
+                margin-top: 50px;
+            }
+            h2 {
+                font-size: 3rem;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+/***************
+ORGANIC
+***************/
+.organsko {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), url(img/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    color: $white;
+    div {
+        @include flex(space-between, center);
+        padding: $padding;
+        article {
+            flex: 0 0 45%;
+            p {
+                margin-top: 50px;
+            }
+            h2 {
+                font-size: 3rem;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+/***************
+PROIZVODNJA
+***************/
+.poruci {
+    @include flex(center, center, row);
+    color: $white;
+    article {
+        flex: 0 0 33.33%;
+        h2 {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+        p {
+            padding: 0 15px;
+        }
+    }
+    article:last-child {
+        @include flex(center, center);
+        background: linear-gradient(rgba(248, 160, 85, .9));
+        padding: 115px 0;
+    }
+}
+
+/***************
+FOOTER
+***************/
+footer {
+    @include flex(stretch, stretch);
+    article:nth-child(1) {
+        flex: 0 0 60%;
+        background: linear-gradient(rgba(90, 87, 78, .9));
+        padding: 0 0 0 60px;
+        height: 300px;
+        color: $white;
+        @include flex(center, flex-start,column);
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        p {
+            font-weight: 600;
+        }
+    }
+    article:nth-child(2) {
+        flex: 0 0 40%;
+        background: linear-gradient(rgba(248, 160, 85, .9));
+        padding: 0 0 0 60px;
+        color: $white;
+        @include flex(center, flex-start,column);
+        h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        li {
+            font-weight: 600;
+            .fas {
+                text-shadow: 0 0 2px $black;
+            }
+        }
+    }
+    article:last-child {
+        flex: 0 0 100%;
+        text-align: center;
+        padding: 15px 0;
+        a {
+            color: $orange;
+            font-weight: 600;
+            transition: $transition;
+            &:hover {
+                text-shadow: 0 0 1px $black;
+            }
         }
     }
 }
