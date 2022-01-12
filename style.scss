@@ -51,6 +51,8 @@ img {
 img {
     width: 100%;
     display: block;
+    object-fit: cover;
+    height: 100%;
 }
 
 /***************
@@ -98,6 +100,9 @@ nav {
         font-weight: 800;
         font-size: 2rem;
         line-height: 1;
+        @media (max-width:767px) {
+            margin: auto;
+        }
         span {
             font-weight: 400 !important;
             font-style: italic !important;
@@ -106,11 +111,17 @@ nav {
     }
     ul {
         @include flex(space-between, center);
+        @media (max-width:767px) {
+            margin: auto;
+        }
         li {
             margin-left: 60px;
             font-size: 1rem;
             font-weight: 600;
             padding: 10px;
+            @media (max-width:767px) {
+                margin-left: 15px;
+            }
             a {
                 color: $black;
                 transition: $transition;
@@ -129,13 +140,24 @@ INDEX HEADER
 .indexHeader {
     background-image: linear-gradient(to right, rgba(255, 255, 255, .99), rgba(255, 255, 255, .2)), url(img/header.jpg);
     @include bgBasic;
+    @media (max-width:767px) {
+        height: 60vh;
+    }
     article {
         @include flex(center, flex-start, column);
         height: 100%;
+        @media (max-width:767px) {
+            width: 100%;
+        }
         hgroup {
             width: 50%;
             background: linear-gradient(rgba(255, 255, 255, .5));
             padding: 50px;
+            @media (max-width:767px) {
+                width: 100%;
+                padding: 30px;
+                text-align: center;
+            }
             h1 {
                 color: $orange;
                 font-size: 3rem;
@@ -159,9 +181,15 @@ ABOUT
     @include flex(space-between, center);
     article {
         flex: 0 0 48%;
+        @media (max-width:767px) {
+            flex: 0 0 100%;
+        }
         h2 {
             font-size: 3rem;
             font-weight: 800;
+            @media (max-width:767px) {
+                text-align: center;
+            }
             span {
                 font-size: 3rem;
                 font-weight: 400;
@@ -189,6 +217,9 @@ OTHER HEADER
     background-size: cover;
     height: 50vh;
     @include flex(flex-start, center);
+    @media (max-width:767px) {
+        text-align: center;
+    }
     h1 {
         color: $orange;
         font-size: 3rem;
@@ -207,11 +238,17 @@ PLAN
     background-position: center;
     background-size: cover;
     color: $white;
+    @media (max-width:767px) {
+        background-position: unset;
+    }
     div {
         @include flex(space-between, center);
         padding: $padding;
         article {
             flex: 0 0 45%;
+            @media (max-width:767px) {
+                flex: 0 0 100%;
+            }
             p {
                 margin-top: 50px;
             }
@@ -236,6 +273,9 @@ ORGANIC
         padding: $padding;
         article {
             flex: 0 0 45%;
+            @media (max-width:767px) {
+                flex: 0 0 100%;
+            }
             p {
                 margin-top: 50px;
             }
@@ -251,10 +291,14 @@ ORGANIC
 PROIZVODNJA
 ***************/
 .poruci {
-    @include flex(center, center, row);
+    @include flex(space-between, stretch);
     color: $white;
     article {
+        @include flex(center, center, column);
         flex: 0 0 33.33%;
+        @media (max-width:767px) {
+            flex: 0 0 100%;
+        }
         h2 {
             font-size: 3rem;
             font-weight: 800;
@@ -262,11 +306,16 @@ PROIZVODNJA
         p {
             padding: 0 15px;
         }
+        button {
+            @include btn($white);
+        }
     }
     article:last-child {
-        @include flex(center, center);
         background: linear-gradient(rgba(248, 160, 85, .9));
-        padding: 115px 0;
+        @media (max-width:767px) {
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
     }
 }
 
@@ -282,6 +331,9 @@ footer {
         height: 300px;
         color: $white;
         @include flex(center, flex-start,column);
+        @media (max-width:767px) {
+            flex: 0 0 100%;
+        }
         h4 {
             font-size: 1.2rem;
             font-weight: 700;
@@ -297,6 +349,10 @@ footer {
         padding: 0 0 0 60px;
         color: $white;
         @include flex(center, flex-start,column);
+        @media (max-width:767px) {
+            flex: 0 0 100%;
+            padding: 0 0 0 30px;
+        }
         h2 {
             font-size: 3rem;
             font-weight: 700;
@@ -313,6 +369,9 @@ footer {
         flex: 0 0 100%;
         text-align: center;
         padding: 15px 0;
+        @media (max-width:767px) {
+            padding: 40px 0;
+        }
         a {
             color: $orange;
             font-weight: 600;

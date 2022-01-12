@@ -50,6 +50,9 @@ img {
 img {
   width: 100%;
   display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
 
 /***************
@@ -84,6 +87,12 @@ nav .logo {
   line-height: 1;
 }
 
+@media (max-width: 767px) {
+  nav .logo {
+    margin: auto;
+  }
+}
+
 nav .logo span {
   font-weight: 400 !important;
   font-style: italic !important;
@@ -108,11 +117,23 @@ nav ul {
           flex-direction: row;
 }
 
+@media (max-width: 767px) {
+  nav ul {
+    margin: auto;
+  }
+}
+
 nav ul li {
   margin-left: 60px;
   font-size: 1rem;
   font-weight: 600;
   padding: 10px;
+}
+
+@media (max-width: 767px) {
+  nav ul li {
+    margin-left: 15px;
+  }
 }
 
 nav ul li a {
@@ -139,6 +160,12 @@ INDEX HEADER
   height: 80vh;
 }
 
+@media (max-width: 767px) {
+  .indexHeader {
+    height: 60vh;
+  }
+}
+
 .indexHeader article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -158,11 +185,25 @@ INDEX HEADER
   height: 100%;
 }
 
+@media (max-width: 767px) {
+  .indexHeader article {
+    width: 100%;
+  }
+}
+
 .indexHeader article hgroup {
   width: 50%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5)));
   background: linear-gradient(rgba(255, 255, 255, 0.5));
   padding: 50px;
+}
+
+@media (max-width: 767px) {
+  .indexHeader article hgroup {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+  }
 }
 
 .indexHeader article hgroup h1 {
@@ -223,9 +264,23 @@ ABOUT
           flex: 0 0 48%;
 }
 
+@media (max-width: 767px) {
+  .about article {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
 .about article h2 {
   font-size: 3rem;
   font-weight: 800;
+}
+
+@media (max-width: 767px) {
+  .about article h2 {
+    text-align: center;
+  }
 }
 
 .about article h2 span {
@@ -271,6 +326,12 @@ OTHER HEADER
           flex-direction: row;
 }
 
+@media (max-width: 767px) {
+  .otherHeader {
+    text-align: center;
+  }
+}
+
 .otherHeader h1 {
   color: #f8a055;
   font-size: 3rem;
@@ -308,6 +369,12 @@ PLAN
   color: #fff;
 }
 
+@media (max-width: 767px) {
+  .plan {
+    background-position: unset;
+  }
+}
+
 .plan div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -331,6 +398,14 @@ PLAN
   -webkit-box-flex: 0;
       -ms-flex: 0 0 45%;
           flex: 0 0 45%;
+}
+
+@media (max-width: 767px) {
+  .plan div article {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
 }
 
 .plan div article p {
@@ -378,6 +453,14 @@ ORGANIC
           flex: 0 0 45%;
 }
 
+@media (max-width: 767px) {
+  .organsko div article {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
 .organsko div article p {
   margin-top: 50px;
 }
@@ -396,12 +479,12 @@ PROIZVODNJA
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -410,21 +493,6 @@ PROIZVODNJA
 }
 
 .poruci article {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 33.33%;
-          flex: 0 0 33.33%;
-}
-
-.poruci article h2 {
-  font-size: 3rem;
-  font-weight: 800;
-}
-
-.poruci article p {
-  padding: 0 15px;
-}
-
-.poruci article:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,13 +504,62 @@ PROIZVODNJA
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.33%;
+          flex: 0 0 33.33%;
+}
+
+@media (max-width: 767px) {
+  .poruci article {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
+.poruci article h2 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.poruci article p {
+  padding: 0 15px;
+}
+
+.poruci article button {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  color: #221f1a;
+  background-color: #fff;
+  letter-spacing: 3px;
+  border: none;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  font-weight: 600;
+  padding: 15px 30px;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.poruci article button:hover {
+  background-color: #988d51;
+}
+
+.poruci article:last-child {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(248, 160, 85, 0.9)));
   background: linear-gradient(rgba(248, 160, 85, 0.9));
-  padding: 115px 0;
+}
+
+@media (max-width: 767px) {
+  .poruci article:last-child {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
 }
 
 /***************
@@ -492,6 +609,14 @@ footer article:nth-child(1) {
           flex-direction: column;
 }
 
+@media (max-width: 767px) {
+  footer article:nth-child(1) {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+
 footer article:nth-child(1) h4 {
   font-size: 1.2rem;
   font-weight: 700;
@@ -527,6 +652,15 @@ footer article:nth-child(2) {
           flex-direction: column;
 }
 
+@media (max-width: 767px) {
+  footer article:nth-child(2) {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    padding: 0 0 0 30px;
+  }
+}
+
 footer article:nth-child(2) h2 {
   font-size: 3rem;
   font-weight: 700;
@@ -547,6 +681,12 @@ footer article:last-child {
           flex: 0 0 100%;
   text-align: center;
   padding: 15px 0;
+}
+
+@media (max-width: 767px) {
+  footer article:last-child {
+    padding: 40px 0;
+  }
 }
 
 footer article:last-child a {
